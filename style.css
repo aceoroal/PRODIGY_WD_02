@@ -1,0 +1,126 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --silver: #eee;
+}
+
+@keyframes lap_in {
+    from {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+body {
+    background-color: var(--silver);
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    /* text-align: center; */
+    margin: 0px 30px; 
+}
+.watch_background {
+    width: 100%;
+    height: 350px;
+    background-color: var(--silver);
+    position: absolute;
+    position: fixed;
+    top: 0;
+    filter: blur(10px)
+}
+.watch {
+    background-color: var(--silver);
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    top: 20px;
+    position: fixed;
+    box-shadow: 0px 20px 30px #aaaaaa25,
+    0px -20px 30px #ffffff;
+    z-index: 100;
+    /* filter: blur(3px);  */
+}
+.time_units {
+    /* background-color: green; */
+    width: 200px;
+    font-family: monospace;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: -15px;
+    padding: 0px 5px;
+    color: #bbb;
+}
+.timer-display {
+    font-family:'Trebuchet MS', sans-serif;
+    font-size: 1.8rem;
+    /* background-color: #fff; */
+    padding: 10px;
+    margin-top: 10px;
+}
+.sub-timer-display {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.sub_container {
+    margin: 30px 0px;
+    margin-top: 350px;
+    margin-bottom: 100px;
+}
+.laps {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.laps p {
+    background-color: #fff;
+    border-radius: 10px;
+    animation: lap_in 1s;
+    padding: 20px 20px;
+    margin: 10px 0px;
+    transition: 1s ease;
+    /* box-shadow: 0px 0px 10px #aaaaaa7a; */
+}
+
+.buttons {
+    background-color: var(--silver);
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+
+}
+.buttons button {
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+.buttons #start_pause-timer {
+    background-color: blue;
+    color: #fff;
+    margin: 0px 30px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>Stopwatch</nav>
+    </header>
+
+    <div class="watch_background"></div>
+    <div class="container">
+        <div class="watch">
+            <div class="time_units">
+                <p>hh</p>
+                <p>mm</p>
+                <p>ss</p>
+                <p>ms</p>
+            </div>
+            <div class="timer-display">
+                00 : 00 : 00 , 00
+            </div>
+            <div class="sub-timer-display">
+                00 : 00 : 00 , 00
+            </div>
+        </div>
+        <div class="sub_container">
+            <span class="laps"></span>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="reset-timer">Reset</button>
+        <button id="start_pause-timer">Start</button>
+        <button id="lap-timer">Lap</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
